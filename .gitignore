@@ -1,0 +1,28 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# Node
+node_modules/
+package-lock.json
+package.json
+
+# Build e dev
+scripts/
+src/
+dist/scripts/
+dist/*.map
+dist/*.ts
+dist/*.scss
+
+# Arquivos temporários
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Outros
+.env
