@@ -1,0 +1,527 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>📊 Projeto de Análise de Marketing.md</title><style></style></head><body id="preview">
+<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="_Anlise_Tcnica__Projeto_de_Marketing_0"></a>📊 Análise Técnica – Projeto de Marketing</h1>
+<h2 class="code-line" data-line-start=2 data-line-end=3 ><a id="1__Origem_dos_Dados_2"></a>1. 📥 Origem dos Dados</h2>
+<p class="has-line-data" data-line-start="4" data-line-end="6">Os dados utilizados neste projeto são fictícios e foram fornecidos em um arquivo <code>.csv</code> chamado <code>dados_marketing.csv</code>.<br>
+Eles representam informações de clientes, histórico de compras, respostas a campanhas e hábitos de consumo entre os anos de 2022 e 2023.</p>
+<hr>
+<h2 class="code-line" data-line-start=9 data-line-end=10 ><a id="2__Dicionrio_de_Dados_e_Estrutura_das_Tabelas_9"></a>2. 🧾 Dicionário de Dados e Estrutura das Tabelas</h2>
+<h3 class="code-line" data-line-start=11 data-line-end=12 ><a id="Tabelas_do_Modelo_11"></a>Tabelas do Modelo</h3>
+<p class="has-line-data" data-line-start="13" data-line-end="14">O modelo de dados inclui as seguintes tabelas:</p>
+<ul>
+<li class="has-line-data" data-line-start="15" data-line-end="17"><strong>DadosMarketing</strong>: Tabela principal com informações do cliente, comportamento de compra e gastos.</li>
+</ul>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Coluna</th>
+<th>Tipo de Dado</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>Inteiro</td>
+<td>Identificador único do cliente</td>
+</tr>
+<tr>
+<td>Ano Nascimento</td>
+<td>Inteiro</td>
+<td>Ano de nascimento do cliente</td>
+</tr>
+<tr>
+<td>Escolaridade</td>
+<td>Texto</td>
+<td>Grau de escolaridade do cliente</td>
+</tr>
+<tr>
+<td>Estado Civil</td>
+<td>Texto</td>
+<td>Estado civil do cliente</td>
+</tr>
+<tr>
+<td>Salario Anual</td>
+<td>Numérico</td>
+<td>Faixa de salário anual (pode conter valores nulos)</td>
+</tr>
+<tr>
+<td>Filhos em Casa</td>
+<td>Inteiro</td>
+<td>Quantidade de filhos que moram com o cliente</td>
+</tr>
+<tr>
+<td>Dias Desde Ultima Compra</td>
+<td>Inteiro</td>
+<td>Quantidade de dias desde a última compra realizada</td>
+</tr>
+<tr>
+<td>Gasto com Alimentos</td>
+<td>Numérico</td>
+<td>Valor gasto em alimentos</td>
+</tr>
+<tr>
+<td>Gasto com Brinquedos</td>
+<td>Numérico</td>
+<td>Valor gasto em brinquedos</td>
+</tr>
+<tr>
+<td>Gasto com Eletrônicos</td>
+<td>Numérico</td>
+<td>Valor gasto em eletrônicos</td>
+</tr>
+<tr>
+<td>Gasto com Móveis</td>
+<td>Numérico</td>
+<td>Valor gasto em móveis</td>
+</tr>
+<tr>
+<td>Gasto com Utilidades</td>
+<td>Numérico</td>
+<td>Valor gasto em utilidades domésticas</td>
+</tr>
+<tr>
+<td>Gasto com Vestuário</td>
+<td>Numérico</td>
+<td>Valor gasto em vestuário</td>
+</tr>
+<tr>
+<td>Numero de Compras na Loja</td>
+<td>Inteiro</td>
+<td>Compras feitas em loja física</td>
+</tr>
+<tr>
+<td>Numero de Compras via Catálogo</td>
+<td>Inteiro</td>
+<td>Compras feitas via catálogo</td>
+</tr>
+<tr>
+<td>Numero de Compras na Web</td>
+<td>Inteiro</td>
+<td>Compras feitas pela internet</td>
+</tr>
+<tr>
+<td>Numero de Compras com Desconto</td>
+<td>Inteiro</td>
+<td>Compras realizadas com cupons/descontos</td>
+</tr>
+<tr>
+<td>Comprou</td>
+<td>Texto</td>
+<td>Indica se realizou compra após a campanha (“Sim” ou “Não”)</td>
+</tr>
+<tr>
+<td>Compra na Campanha 1 a 5</td>
+<td>Texto</td>
+<td>Indica se comprou em cada campanha específica (“Sim” ou “Não”)</td>
+</tr>
+<tr>
+<td>RFM_Score</td>
+<td>Texto</td>
+<td>CALCULADO Score RFM (Recência, Frequência e Monetário)</td>
+</tr>
+<tr>
+<td>Idade</td>
+<td>Inteiro</td>
+<td>Coluna calculada com base no ano atual - ano de nascimento</td>
+</tr>
+<tr>
+<td>Faixa Etária</td>
+<td>Texto</td>
+<td>Coluna categorizando a idade por faixa (18-30, 31-40, etc.)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p class="has-line-data" data-line-start="44" data-line-end="45"><strong>CustosCampanhas</strong>: Tabela auxiliar criada para simular os custos de cada campanha de marketing.</p>
+<p class="has-line-data" data-line-start="46" data-line-end="48">&lt;details&gt;<br>
+&lt;summary&gt;🗃️ Versão anterior: &lt;s&gt;CustosCampanhas&lt;/s&gt; (obsoleta)&lt;/summary&gt;</p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Campanha</th>
+<th>&lt;s&gt;Custo (R$)&lt;/s&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Campanha 1</td>
+<td>&lt;s&gt;10.000&lt;/s&gt;</td>
+</tr>
+<tr>
+<td>Campanha 2</td>
+<td>&lt;s&gt;8.000&lt;/s&gt;</td>
+</tr>
+<tr>
+<td>Campanha 3</td>
+<td>&lt;s&gt;5.000&lt;/s&gt;</td>
+</tr>
+<tr>
+<td>Campanha 4</td>
+<td>&lt;s&gt;3.000&lt;/s&gt;</td>
+</tr>
+<tr>
+<td>Campanha 5</td>
+<td>&lt;s&gt;2.000&lt;/s&gt;</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p class="has-line-data" data-line-start="57" data-line-end="58">⚠️ Essa versão foi utilizada inicialmente, mas substituída durante o projeto para representar melhor os investimentos reais em campanhas.</p>
+</blockquote>
+<p class="has-line-data" data-line-start="59" data-line-end="60">&lt;/details&gt;</p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Campanha</th>
+<th>Custo (R$)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Campanha 1</td>
+<td>21.500</td>
+</tr>
+<tr>
+<td>Campanha 2</td>
+<td>42.200</td>
+</tr>
+<tr>
+<td>Campanha 3</td>
+<td>93.000</td>
+</tr>
+<tr>
+<td>Campanha 4</td>
+<td>98.500</td>
+</tr>
+<tr>
+<td>Campanha 5</td>
+<td>30.000</td>
+</tr>
+</tbody>
+</table>
+<p class="has-line-data" data-line-start="69" data-line-end="70">Esses custos foram fundamentais para o cálculo realista do <strong>CAC (Custo de Aquisição por Cliente)</strong> e do <strong>ROI (Retorno sobre Investimento)</strong>.</p>
+<hr>
+<ul>
+<li class="has-line-data" data-line-start="73" data-line-end="75"><strong>RFM_Segmentos</strong>: Tabela auxiliar que traduz os scores da coluna <code>RFM_Score</code> em perfis de cliente.</li>
+</ul>
+<p class="has-line-data" data-line-start="75" data-line-end="77">&lt;details&gt;<br>
+&lt;summary&gt;🗃️ Versão anterior: &lt;s&gt;RFM_Segmentos&lt;/s&gt; (obsoleta)&lt;/summary&gt;</p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>RFM_Score</th>
+<th>&lt;s&gt;Segmento&lt;/s&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>333</td>
+<td>&lt;s&gt;Cliente VIP&lt;/s&gt;</td>
+</tr>
+<tr>
+<td>332</td>
+<td>&lt;s&gt;Cliente Leal&lt;/s&gt;</td>
+</tr>
+<tr>
+<td>331</td>
+<td>&lt;s&gt;Cliente Potencial&lt;/s&gt;</td>
+</tr>
+<tr>
+<td>221</td>
+<td>&lt;s&gt;Cliente Promissor&lt;/s&gt;</td>
+</tr>
+<tr>
+<td>211</td>
+<td>&lt;s&gt;Novo Cliente&lt;/s&gt;</td>
+</tr>
+<tr>
+<td>111</td>
+<td>&lt;s&gt;Inativo&lt;/s&gt;</td>
+</tr>
+<tr>
+<td>311</td>
+<td>&lt;s&gt;Recuperação&lt;/s&gt;</td>
+</tr>
+<tr>
+<td>133</td>
+<td>&lt;s&gt;Impulsivo&lt;/s&gt;</td>
+</tr>
+<tr>
+<td>123</td>
+<td>&lt;s&gt;Baixo Engajamento&lt;/s&gt;</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p class="has-line-data" data-line-start="90" data-line-end="91">⚠️ Inicialmente usada para mapeamento direto. Posteriormente expandida para permitir análises mais refinadas por componente.</p>
+</blockquote>
+<p class="has-line-data" data-line-start="92" data-line-end="93">&lt;/details&gt;</p>
+<p class="has-line-data" data-line-start="94" data-line-end="95">A tabela foi estendida para incluir a decomposição dos componentes de pontuação RFM – <strong>Recência</strong>, <strong>Frequência</strong> e <strong>Monetário</strong> – permitindo análises mais detalhadas.</p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>RFM_Score</th>
+<th>Segmento</th>
+<th>Recência</th>
+<th>Frequência</th>
+<th>Monetário</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>111</td>
+<td>Inativo</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>123</td>
+<td>Em Risco</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>211</td>
+<td>Novo Cliente</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>221</td>
+<td>Promissor</td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>231</td>
+<td>Potencial</td>
+<td>2</td>
+<td>3</td>
+<td>1</td>
+</tr>
+<tr>
+<td>311</td>
+<td>Recuperação</td>
+<td>3</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>331</td>
+<td>Campeão de Receita</td>
+<td>3</td>
+<td>3</td>
+<td>1</td>
+</tr>
+<tr>
+<td>333</td>
+<td>VIP</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p class="has-line-data" data-line-start="107" data-line-end="108"><em>(Demais combinações intermediárias também foram mapeadas.)</em></p>
+<hr>
+<p class="has-line-data" data-line-start="112" data-line-end="113">*<strong>CampanhasDesempenho</strong> Tabela auxiliar criada para consolidar os principais KPIs por campanha:</p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Campanha</th>
+<th>ROI</th>
+<th>CAC</th>
+<th>TaxaConversao</th>
+<th>Clientes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Campanha 1</td>
+<td>376%</td>
+<td>R$ 145</td>
+<td>7,40%</td>
+<td>148</td>
+</tr>
+<tr>
+<td>Campanha 2</td>
+<td>300%</td>
+<td>R$ 289</td>
+<td>7,30%</td>
+<td>146</td>
+</tr>
+<tr>
+<td>Campanha 3</td>
+<td>150%</td>
+<td>R$ 650</td>
+<td>7,15%</td>
+<td>143</td>
+</tr>
+<tr>
+<td>Campanha 4</td>
+<td>100%</td>
+<td>R$ 741</td>
+<td>6,65%</td>
+<td>133</td>
+</tr>
+<tr>
+<td>Campanha 5</td>
+<td>12%</td>
+<td>R$ 1.154</td>
+<td>1,30%</td>
+<td>26</td>
+</tr>
+</tbody>
+</table>
+<p class="has-line-data" data-line-start="122" data-line-end="123">Essa estrutura viabilizou análises comparativas, visualizações consolidadas e métricas derivadas com maior clareza.</p>
+<hr>
+<h2 class="code-line" data-line-start=127 data-line-end=128 ><a id="3__Tratamento_e_Preparao_dos_Dados_127"></a>3. 🧹 Tratamento e Preparação dos Dados</h2>
+<p class="has-line-data" data-line-start="129" data-line-end="130">Durante o processo de limpeza e transformação dos dados, foram aplicadas as seguintes ações:</p>
+<ul>
+<li class="has-line-data" data-line-start="131" data-line-end="132">Preenchimento de valores nulos da coluna <strong>Salario Anual</strong> com a média da coluna.</li>
+<li class="has-line-data" data-line-start="132" data-line-end="133">Criação da coluna <strong>Idade</strong> a partir do ano atual e ano de nascimento.</li>
+<li class="has-line-data" data-line-start="133" data-line-end="134">Criação da coluna <strong>Faixa Etária</strong> com base na idade.</li>
+<li class="has-line-data" data-line-start="134" data-line-end="135">Criação da coluna <strong>RFM_Score</strong> para segmentação de clientes com base em Recência, Frequência e Monetário.</li>
+<li class="has-line-data" data-line-start="135" data-line-end="136">Criação da tabela <strong>CustosCampanhas</strong> para possibilitar cálculo de ROI e CAC.</li>
+<li class="has-line-data" data-line-start="136" data-line-end="137">Criação da tabela <strong>RFM_Segmentos</strong> para análise qualitativa dos perfis.</li>
+<li class="has-line-data" data-line-start="137" data-line-end="138">Verificação de <strong>outliers</strong> com gráficos de dispersão; mantivemos os dados por representarem perfis extremos relevantes.</li>
+<li class="has-line-data" data-line-start="138" data-line-end="139">Criação da tabela <strong>CampanhasDesempenho</strong>, centralizando ROI, CAC, Conversão e volume de clientes por campanha.</li>
+<li class="has-line-data" data-line-start="139" data-line-end="140">Atualização dos valores de custo das campanhas** (<code>CustosCampanhas</code>) para maior realismo nos cálculos financeiros.</li>
+<li class="has-line-data" data-line-start="140" data-line-end="141">Expansão da tabela <code>RFM_Segmentos</code>** para incluir as colunas <code>Recência</code>, <code>Frequência</code> e <code>Monetário</code>, permitindo detalhamento nas segmentações.</li>
+<li class="has-line-data" data-line-start="141" data-line-end="142">🚀 <em>Ponto de melhoria futuro</em>: permitir o detalhamento das campanhas <strong>por segmento RFM</strong>, usando o filtro de segmento no painel. Atualmente isso gera muitos valores em branco, e precisaria de ajustes futuros na modelagem.</li>
+</ul>
+<hr>
+<h2 class="code-line" data-line-start=146 data-line-end=147 ><a id="4__Principais_Frmulas_DAX_Criadas_146"></a>4. 🧠 Principais Fórmulas DAX Criadas</h2>
+<p class="has-line-data" data-line-start="148" data-line-end="149">[As fórmulas DAX estão detalhadas separadamente no arquivo <code>formulas.dax</code>.]</p>
+<h2 class="code-line" data-line-start=150 data-line-end=151 ><a id="_Mtrica_Taxa_de_Converso_150"></a>📐 Métrica: Taxa de Conversão</h2>
+<p class="has-line-data" data-line-start="152" data-line-end="154"><strong>Conceito de Negócio</strong><br>
+A taxa de conversão representa o percentual de clientes que realizaram uma compra. É um dos principais indicadores de sucesso das campanhas e estratégias de marketing.</p>
+<p class="has-line-data" data-line-start="155" data-line-end="157"><strong>Fórmula Padrão</strong><br>
+Taxa de Conversão = Total de Clientes que Compraram / Total de Clientes</p>
+<p class="has-line-data" data-line-start="158" data-line-end="159"><strong>DAX no projeto</strong></p>
+<pre><code class="has-line-data" data-line-start="160" data-line-end="166" class="language-DAX">.TaxaDeConversao = 
+DIVIDE(
+    COUNTROWS(FILTER(DadosMarketing, DadosMarketing[Comprou] = &quot;Sim&quot;)),
+    COUNTROWS(DadosMarketing)
+)
+</code></pre>
+<p class="has-line-data" data-line-start="167" data-line-end="169"><strong>Justificativa</strong><br>
+O campo <code>Comprou</code> contém o valor “Sim” como texto, indicando uma compra realizada. Aplicamos esse filtro e dividimos pelo total de clientes para obter a taxa geral. A fórmula também pode ser adaptada por segmento (estado civil, campanha, país, etc.).</p>
+<hr>
+<h2 class="code-line" data-line-start=172 data-line-end=173 ><a id="_Mtrica_ROI_Retorno_sobre_o_Investimento_172"></a>📐 Métrica: ROI (Retorno sobre o Investimento)</h2>
+<p class="has-line-data" data-line-start="174" data-line-end="176"><strong>Conceito de Negócio</strong><br>
+O ROI mede o retorno gerado para cada unidade de valor investido em uma campanha de marketing. Quanto maior o ROI, mais rentável foi a ação.</p>
+<p class="has-line-data" data-line-start="177" data-line-end="179"><strong>Fórmula Padrão</strong><br>
+ROI = (Receita - Custo) / Custo</p>
+<p class="has-line-data" data-line-start="180" data-line-end="181"><strong>DAX no projeto (exemplo da Campanha 1)</strong></p>
+<pre><code class="has-line-data" data-line-start="182" data-line-end="199" class="language-DAX">.ROICampanha1 = 
+VAR ClientesCampanha = 
+    FILTER(DadosMarketing, DadosMarketing[Compra na Campanha 1] = 1)
+
+VAR ReceitaCampanha = 
+    CALCULATE([.TotalGasto], ClientesCampanha)
+
+VAR CustoCampanha = 
+    LOOKUPVALUE(
+        'CustosCampanhas'[Custo],
+        'CustosCampanhas'[Campanha],
+        &quot;Campanha 1&quot;
+    )
+
+RETURN
+DIVIDE(ReceitaCampanha - CustoCampanha, CustoCampanha)
+</code></pre>
+<p class="has-line-data" data-line-start="200" data-line-end="202"><strong>Justificativa</strong><br>
+Utilizamos uma tabela auxiliar simulada (<code>CustosCampanhas</code>) para viabilizar comparações e reaproveitamento da lógica entre as campanhas. O resultado é apresentado como número decimal (ex: 2.8 = 280%).</p>
+<hr>
+<h2 class="code-line" data-line-start=205 data-line-end=206 ><a id="_Mtrica_CAC_Custo_de_Aquisio_de_Cliente_205"></a>📐 Métrica: CAC (Custo de Aquisição de Cliente)</h2>
+<p class="has-line-data" data-line-start="207" data-line-end="209"><strong>Conceito de Negócio</strong><br>
+O CAC representa o custo médio para adquirir um cliente durante uma campanha de marketing.</p>
+<p class="has-line-data" data-line-start="210" data-line-end="212"><strong>Fórmula Padrão</strong><br>
+CAC = Custo da Campanha / Número de Clientes Adquiridos</p>
+<p class="has-line-data" data-line-start="213" data-line-end="214"><strong>DAX no projeto (exemplo da Campanha 1)</strong></p>
+<pre><code class="has-line-data" data-line-start="215" data-line-end="229" class="language-DAX">.CACCampanha1 = 
+VAR Compradores = 
+    COUNTROWS(FILTER(DadosMarketing, DadosMarketing[Compra na Campanha 1] = &quot;Sim&quot;))
+
+VAR CustoCampanha = 
+    LOOKUPVALUE(
+        'CustosCampanhas'[Custo],
+        'CustosCampanhas'[Campanha],
+        &quot;Campanha 1&quot;
+    )
+
+RETURN
+DIVIDE(CustoCampanha, Compradores)
+</code></pre>
+<p class="has-line-data" data-line-start="230" data-line-end="232"><strong>Justificativa</strong><br>
+O uso da tabela de custos das campanhas (<code>CustosCampanhas</code>) permite simulações e comparações dinâmicas do CAC entre diferentes ações.</p>
+<hr>
+<h2 class="code-line" data-line-start=235 data-line-end=236 ><a id="_Segmentao_RFM_Recncia_Frequncia_e_Valor_Monetrio_235"></a>📐 Segmentação RFM (Recência, Frequência e Valor Monetário)</h2>
+<p class="has-line-data" data-line-start="237" data-line-end="239"><strong>Conceito de Negócio</strong><br>
+O modelo RFM classifica os clientes com base em:</p>
+<ul>
+<li class="has-line-data" data-line-start="240" data-line-end="241"><strong>Recência</strong>: quanto tempo passou desde a última compra.</li>
+<li class="has-line-data" data-line-start="241" data-line-end="242"><strong>Frequência</strong>: quantas compras o cliente realizou.</li>
+<li class="has-line-data" data-line-start="242" data-line-end="244"><strong>Monetário</strong>: quanto o cliente gastou no total.</li>
+</ul>
+<p class="has-line-data" data-line-start="244" data-line-end="245"><strong>DAX no projeto (coluna única)</strong></p>
+<pre><code class="has-line-data" data-line-start="246" data-line-end="288" class="language-DAX">RFM_Score = 
+VAR RecenciaScore = 
+    SWITCH(
+        TRUE(),
+        DadosMarketing[Dias Desde Ultima Compra] &lt;= 30, 3,
+        DadosMarketing[Dias Desde Ultima Compra] &lt;= 90, 2,
+        1
+    )
+
+VAR FreqTotal = 
+    DadosMarketing[Numero de Compras na Loja] +
+    DadosMarketing[Numero de Compras via Catalogo] +
+    DadosMarketing[Numero de Compras na Web] +
+    DadosMarketing[Numero de Compras com Desconto]
+
+VAR FrequenciaScore = 
+    SWITCH(
+        TRUE(),
+        FreqTotal &gt;= 15, 3,
+        FreqTotal &gt;= 8, 2,
+        1
+    )
+
+VAR ValorTotal = 
+    DadosMarketing[Gasto com Eletronicos] +
+    DadosMarketing[Gasto com Brinquedos] +
+    DadosMarketing[Gasto com Moveis] +
+    DadosMarketing[Gasto com Utilidades] +
+    DadosMarketing[Gasto com Alimentos] +
+    DadosMarketing[Gasto com Vestuario]
+
+VAR MonetarioScore = 
+    SWITCH(
+        TRUE(),
+        ValorTotal &gt;= 2000, 3,
+        ValorTotal &gt;= 1000, 2,
+        1
+    )
+
+RETURN
+FORMAT(RecenciaScore, &quot;0&quot;) &amp; FORMAT(FrequenciaScore, &quot;0&quot;) &amp; FORMAT(MonetarioScore, &quot;0&quot;)
+</code></pre>
+<p class="has-line-data" data-line-start="289" data-line-end="291"><strong>Justificativa</strong><br>
+Concentrar os scores de Recência, Frequência e Monetário em uma única coluna simplifica os filtros e a análise visual. Isso permite representar rapidamente o perfil de valor e atividade do cliente.</p>
+<hr>
+<h2 class="code-line" data-line-start=294 data-line-end=295 ><a id="_Melhorias_Futuras_294"></a>🔭 Melhorias Futuras</h2>
+<ul>
+<li class="has-line-data" data-line-start="296" data-line-end="297">Criar métricas de Lifetime Value (CLV).</li>
+<li class="has-line-data" data-line-start="297" data-line-end="298">Aplicar clustering com base no score RFM.</li>
+<li class="has-line-data" data-line-start="298" data-line-end="299">Aprofundar análise por canal de compra.</li>
+<li class="has-line-data" data-line-start="299" data-line-end="300">Avaliar sazonalidade nas campanhas.</li>
+<li class="has-line-data" data-line-start="300" data-line-end="301">Adicionar explicações visuais de cada métrica (tooltips ou imagens).</li>
+</ul>
+
+</body></html>
