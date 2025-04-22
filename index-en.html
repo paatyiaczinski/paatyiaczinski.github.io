@@ -210,6 +210,7 @@
                       <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                       <div class="divider-custom-line"></div>
                     </div>
+
                     <!-- introduction -->
                     <div class="text-start mb-4 px-4">
                       <h4 class="text-uppercase mb-3">🧩 Project Overview</h4>
@@ -217,7 +218,8 @@
                         Interactive analysis of (simulated) marketing data focused on customer behavior, campaign performance (ROI/CAC), and purchasing patterns. 
                         The project applies RFM segmentation techniques and visualization in Power BI to deliver actionable insights for marketing managers.
                       </p>
-                    </div>                    
+                    </div>  
+
                     <!-- Objectives and Tools -->
                     <div class="row text-start px-4 mb-4">
                       <div class="col-md-6">
@@ -239,26 +241,7 @@
                       </div>
                     </div>
 
-          
-                    <!-- Power BI -->
-                    <div class="mb-5">
-                      <iframe
-                        src="https://app.powerbi.com/view?r=eyJrIjoiZWMyYWZjMTgtY2I3NS00YTNiLWIyYzAtZTQyNGZkNDQxYzBjIiwidCI6IjkwNzZiMjlhLWNmZGMtNGMyNC1iNjJmLTBiMTBiOWViMDhmYiIsImMiOjl9"
-                        width="100%"
-                        height="650"
-                        frameborder="0"
-                        allowFullScreen="true"
-                        style="border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.1);"
-                      ></iframe>
-
-                      <p class="text-center mt-3">
-                        🔗 <a href="https://app.powerbi.com/view?r=eyJrIjoiZWMyYWZjMTgtY2I3NS00YTNiLWIyYzAtZTQyNGZkNDQxYzBjIiwidCI6IjkwNzZiMjlhLWNmZGMtNGMyNC1iNjJmLTBiMTBiOWViMDhmYiIsImMiOjl9" target="_blank" style="color: #406882; font-weight: 500;">
-                          Access report in Power BI
-                        </a>
-                      </p>
-                    </div>
-          
-                    <!-- Useful links as a list -->
+                     <!-- Useful links as a list -->
                     <div class="text-start px-4 mt-4">
                       <h5 class="text-uppercase mb-3">Full Documentation</h5>
                       <ul class="list-unstyled" style="font-size: 1.05rem;">
@@ -276,17 +259,54 @@
                         </li>
                       </ul>
                     </div>
-                      
-                        <!-- Close button -->
+          
+                    <!-- Project Panel - Power BI -->        
+                    <div class="px-4 mt-4">
+                      <ul class="nav nav-tabs justify-content-center border-0" id="docTabs" role="tablist" style="gap: 1rem;">
+                        <li class="nav-item flex-fill text-center" role="presentation">
+                          <button class="nav-link active py-3 fw-bold fs-5 rounded-top" 
+                                  id="dashboard-tab" 
+                                  data-bs-toggle="tab" 
+                                  data-bs-target="#dashboard" 
+                                  type="button" 
+                                  role="tab" 
+                                  aria-controls="dashboard" 
+                                  aria-selected="true"
+                                  style="width: 100%; background-color: #eaeaf4;">
+                                  📊 Dashboard PowerBi
+                          </button>
+                      </ul>
+                    
+                      <div class="tab-content p-4 border border-top-0 rounded-bottom" id="docTabContent" style="background-color: #f9f9f9; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
+                    
+                        <!-- Aba 1: Dashboard -->
+                        <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                          <iframe 
+                            src="https://app.powerbi.com/view?r=eyJrIjoiZWMyYWZjMTgtY2I3NS00YTNiLWIyYzAtZTQyNGZkNDQxYzBjIiwidCI6IjkwNzZiMjlhLWNmZGMtNGMyNC1iNjJmLTBiMTBiOWViMDhmYiIsImMiOjl9" 
+                            width="100%" 
+                            height="650" 
+                            frameborder="0" 
+                            style="border: none; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.1);">
+                          </iframe>
+                    
+                          <p class="text-center mt-3">
+                            🔗 <a href="https://app.powerbi.com/view?r=eyJrIjoiZWMyYWZjMTgtY2I3NS00YTNiLWIyYzAtZTQyNGZkNDQxYzBjIiwidCI6IjkwNzZiMjlhLWNmZGMtNGMyNC1iNjJmLTBiMTBiOWViMDhmYiIsImMiOjl9" 
+                            target="_blank" 
+                            style="color: #406882; font-weight: 500; text-decoration: underline;">
+                            Access directly in Power BI
+                            </a>
+                          </p>
+                        </div>
+                    </div>
+
+                      <!-- Close button -->
                     <div class="d-flex justify-content-end mt-4 px-4">
                       <button class="btn btn-primary" data-bs-dismiss="modal">
                          <i class="fas fa-times fa-fw"></i> Close
                       </button>
-                    </div>
-                        
-                    </div>
-          
+                    </div>                 
                   </div>
+                 </div>
                 </div>
               </div>
             </div>
