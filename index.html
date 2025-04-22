@@ -20,7 +20,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top">Portifólio - Patricia Iaczinski</a>
+                <a class="navbar-brand" href="#page-top">Portfólio - Patricia Iaczinski</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -29,7 +29,7 @@
                     <ul class="navbar-nav ms-auto">
                         
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Sobre</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portifólio</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfólio</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contatos</a></li>
                         <li class="nav-item mx-0 mx-lg-1">
                             <a class="nav-link py-3 px-0 px-lg-3 rounded" href="index-en.html">
@@ -85,7 +85,7 @@
         <section class="page-section bg-white portfolio" id="portfolio">
             <div class="container">
                 <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portifólio</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfólio</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
@@ -100,7 +100,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/teste.png" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/analise-mkt.png" alt="..." />
                             
                         </div>
                     </div>
@@ -204,7 +204,7 @@
                 <div class="modal-body pb-4">
                   <div class="container-fluid">
           
-                    <h2 class="text-uppercase text-center mb-4" style="color: #406882;">Marketing de Vendas</h2>
+                    <h2 class="text-uppercase text-center mb-4" style="color: #406882;">Análise de Marketing</h2>
           
                     <!-- Divider -->
                     <div class="divider-custom mb-4 text-center">
@@ -217,9 +217,8 @@
                     <div class="text-start mb-4 px-4">
                       <h4 class="text-uppercase mb-3">🧩 Contexto do Projeto</h4>
                       <p class="fs-5 mb-0" style="font-weight: normal;">
-                        Este projeto faz parte de um portfólio pessoal de análise de dados e tem como objetivo explorar, modelar e comunicar insights sobre o comportamento de clientes, 
-                        performance de campanhas de marketing e padrões de compra com base em dados simulados. O foco está na aplicação de técnicas práticas para construção de métricas, 
-                        segmentações e visualizações que auxiliem gestores de marketing na tomada de decisões.
+                        Análise interativa de dados de marketing (simulados) focada em comportamento do cliente, desempenho de campanhas (ROI/CAC) e padrões de compra. 
+                        O projeto aplica técnicas de segmentação RFM e visualização em Power BI para fornecer insights acionáveis a gestores de marketing.
                       </p>
                     </div>
                     <!-- Objetivos e Ferramentas -->
@@ -256,26 +255,42 @@
 
                       <p class="text-center mt-3">
                         🔗 <a href="https://app.powerbi.com/view?r=eyJrIjoiZWMyYWZjMTgtY2I3NS00YTNiLWIyYzAtZTQyNGZkNDQxYzBjIiwidCI6IjkwNzZiMjlhLWNmZGMtNGMyNC1iNjJmLTBiMTBiOWViMDhmYiIsImMiOjl9" target="_blank" style="color: #406882; font-weight: 500;">
-                          Acessar relatório no Power BI
+                          Access report in Power BI
                         </a>
                       </p>
                     </div>
-                            
-                    <!-- Links úteis como lista -->
+
+                     <!-- Abas para documentação interna -->
+                    <div class="px-4">
+                      <ul class="nav nav-tabs" id="docTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="insights-tab" data-bs-toggle="tab" data-bs-target="#insights" type="button" role="tab">💡 Resumo</button>
+                        </li>
+                      </ul>
+
+                      <div class="tab-content p-3 border border-top-0 rounded-bottom" id="docTabContent" style="background-color: #f9f9f9;">
+                        <div class="tab-pane fade show active" id="insights" role="tabpanel">
+                          <iframe src="https://nbviewer.org/github/paatyiaczinski/portfolio-dados/blob/main/customer-segmentation-ml/src/02-report.ipynb"  width="100%" height="650" frameborder="0" style="border: none;"></iframe>
+                        </div>
+                      </div>
+                    </div>
+                        
+
+                    <!-- Links -->
                     <div class="text-start px-4 mt-4">
                       <h5 class="text-uppercase mb-3">Documentação completa</h5>
                       <ul class="list-unstyled" style="font-size: 1.05rem;">
                         <li class="mb-2">
-                          📄 <a href="https://github.com/paatyiaczinski/portifolio-dados/tree/main/marketing#readme" target="_blank" style="color: #406882; text-decoration: underline;">README</a>
+                          📄 <a href="https://github.com/paatyiaczinski/portfolio-dados/blob/main/marketing/README.pt.md" target="_blank" style="color: #406882; text-decoration: underline;">README</a>
                         </li>
                         <li class="mb-2">
-                          🧮 <a href="https://github.com/paatyiaczinski/portifolio-dados/blob/main/marketing/formulas.dax" target="_blank" style="color: #406882; text-decoration: underline;">Fórmulas DAX</a>
+                          🧮 <a href="https://github.com/paatyiaczinski/portfolio-dados/blob/main/marketing/formulas.dax" target="_blank" style="color: #406882; text-decoration: underline;">Fórmulas DAX</a>
                         </li>
                         <li class="mb-2">
-                          📊 <a href="https://github.com/paatyiaczinski/portifolio-dados/blob/main/marketing/docs/technical-analysis.pt.md" target="_blank" style="color: #406882; text-decoration: underline;">Análise Técnica (Markdown)</a>
+                          📊 <a href="https://github.com/paatyiaczinski/portfolio-dados/blob/main/marketing/docs/technical-analysis.pt.md" target="_blank" style="color: #406882; text-decoration: underline;">Análise Técnica (Markdown)</a>
                         </li>
                         <li class="mb-2">
-                          💡 <a href="https://github.com/paatyiaczinski/portifolio-dados/blob/main/marketing/docs/insights.pt.md" target="_blank" style="color: #406882; text-decoration: underline;">Insights (Markdown)</a>
+                          💡 <a href="https://github.com/paatyiaczinski/portfolio-dados/blob/main/marketing/docs/insights.pt.md" target="_blank" style="color: #406882; text-decoration: underline;">Insights (Markdown)</a>
                         </li>
                       </ul>
                     </div>
@@ -325,7 +340,7 @@
                                     <!-- Power BI Embed -->
                                     <div class="mb-5">
                                       <iframe
-                                        src="https://nbviewer.org/github/paatyiaczinski/portifolio-dados/blob/main/customer-segmentation-ml/src/02-report.ipynb" 
+                                        src="https://nbviewer.org/github/paatyiaczinski/portfolio-dados/blob/main/customer-segmentation-ml/src/02-report.ipynb" 
                                         width="100%"
                                         height="650"
                                         frameborder="0"
@@ -345,16 +360,16 @@
                                         <!-- Lista de links -->
                                         <ul class="list-unstyled" style="font-size: 1.1rem;">
                                           <li class="mb-2">
-                                            📄 <a href="https://github.com/paatyiaczinski/portifolio-dados/blob/main/customer-segmentation-ml/README.md" target="_blank" style="color: #406882; text-decoration: underline;">README</a>
+                                            📄 <a href="https://github.com/paatyiaczinski/portfolio-dados/blob/main/customer-segmentation-ml/README.md" target="_blank" style="color: #406882; text-decoration: underline;">README</a>
                                           </li>
                                           <li class="mb-2">
-                                            🧮 <a href="https://github.com/paatyiaczinski/portifolio-dados/blob/main/customer-segmentation-ml/src/01-exploration.ipynb" target="_blank" style="color: #406882; text-decoration: underline;">Fórmulas DAX</a>
+                                            🧮 <a href="https://github.com/paatyiaczinski/portfolio-dados/blob/main/customer-segmentation-ml/src/01-exploration.ipynb" target="_blank" style="color: #406882; text-decoration: underline;">Fórmulas DAX</a>
                                           </li>
                                           <li class="mb-2">
-                                            📊 <a href="https://github.com/paatyiaczinski/portifolio-dados/blob/main/customer-segmentation-ml/src/02-report.ipynb" target="_blank" style="color: #406882; text-decoration: underline;">Technical Analysis</a>
+                                            📊 <a href="https://github.com/paatyiaczinski/portfolio-dados/blob/main/customer-segmentation-ml/src/02-report.ipynb" target="_blank" style="color: #406882; text-decoration: underline;">Technical Analysis</a>
                                           </li>
                                           <li class="mb-2">
-                                            💡 <a href="https://github.com/paatyiaczinski/portifolio-dados/blob/main/customer-segmentation-ml/src/02-report.ipynb" target="_blank" style="color: #406882; text-decoration: underline;">Insights</a>
+                                            💡 <a href="https://github.com/paatyiaczinski/portfolio-dados/blob/main/customer-segmentation-ml/src/02-report.ipynb" target="_blank" style="color: #406882; text-decoration: underline;">Insights</a>
                                           </li>
                                         </ul>
                                       
@@ -414,16 +429,16 @@
                                         <!-- Lista de links -->
                                         <ul class="list-unstyled" style="font-size: 1.1rem;">
                                           <li class="mb-2">
-                                            📄 <a href="https://github.com/paatyiaczinski/portifolio-dados/blob/main/store-comparison-case/README.md" target="_blank" style="color: #406882; text-decoration: underline;">README</a>
+                                            📄 <a href="https://github.com/paatyiaczinski/portfolio-dados/blob/main/store-comparison-case/README.md" target="_blank" style="color: #406882; text-decoration: underline;">README</a>
                                           </li>
                                           <li class="mb-2">
-                                            🧮 <a href="https://github.com/paatyiaczinski/portifolio-dados/blob/main/store-comparison-case/formulas.dax" target="_blank" style="color: #406882; text-decoration: underline;">Fórmulas DAX</a>
+                                            🧮 <a href="https://github.com/paatyiaczinski/portfolio-dados/blob/main/store-comparison-case/formulas.dax" target="_blank" style="color: #406882; text-decoration: underline;">Fórmulas DAX</a>
                                           </li>
                                           <li class="mb-2">
-                                            📊 <a href="https://github.com/paatyiaczinski/portifolio-dados/blob/main/store-comparison-case/docs/technical-analysis.md" target="_blank" style="color: #406882; text-decoration: underline;">Technical Analysis</a>
+                                            📊 <a href="https://github.com/paatyiaczinski/portfolio-dados/blob/main/store-comparison-case/docs/technical-analysis.md" target="_blank" style="color: #406882; text-decoration: underline;">Technical Analysis</a>
                                           </li>
                                           <li class="mb-2">
-                                            💡 <a href="https://github.com/paatyiaczinski/portifolio-dados/blob/main/store-comparison-case/docs/insights.md" target="_blank" style="color: #406882; text-decoration: underline;">Insights</a>
+                                            💡 <a href="https://github.com/paatyiaczinski/portfolio-dados/blob/main/store-comparison-case/docs/insights.md" target="_blank" style="color: #406882; text-decoration: underline;">Insights</a>
                                           </li>
                                         </ul>
                                       
