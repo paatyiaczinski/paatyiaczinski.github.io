@@ -347,79 +347,164 @@
         </div>
         <!-- Portfolio Modal 2-->
         <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
-            <div class="modal-dialog modal-xxl modal-dialog-centered">
-                <div class="modal-content p-5">
-                    <div class="modal-header border-0">
-                        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+              <div class="modal-header border-0">
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+        
+              <div class="modal-body pb-4">
+                <div class="container-fluid">
+                  <!-- Titulo -->
+                  <h2 class="text-uppercase text-center mb-4" style="color: #406882;">Segmentação de clientes - Machine earning</h2>
+        
+                  <!-- Divider -->
+                  <div class="divider-custom mb-4 text-center">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+      
+                  <!-- Introdução -->
+                  <div class="text-start mb-4 px-4">
+                    <h4 class="text-uppercase mb-3">🧩 Contexto do Projeto</h4>
+                    <p class="fs-5 mb-0" style="font-weight: normal;">
+                      Segmentação de clientes baseada em dados simulados, com foco em identificar perfis de consumo a partir de variáveis 
+                      como idade, renda e pontuação de gastos. O projeto utiliza técnicas de clusterização (KMeans) para agrupar clientes 
+                      com padrões semelhantes e gerar insights estratégicos para ações de marketing direcionadas.
+
+                    </p>
+                  </div>
+                  
+                  <!-- Objetivos e Ferramentas -->
+                  <div class="row text-start px-4 mb-4">
+                    <div class="col-md-6">
+                      <h5 class="text-uppercase mb-2">📝 Destaques</h5>
+                      <ul>
+                        <li> Clusterização com KMeans e validação com Elbow Method e Silhouette Score </li>
+                        <li> Visualizações comparativas por cluster (PCA, Boxplot, Radar Chart)  </li>
+                        <li> Identificação de perfis e estratégias recomendadas por grupo  </li>
+                        <li> Separação entre código analítico (exploração) e relatório (sumário executivo)  </li>
+                      
                     </div>
-
-                    <div class="modal-body pb-4">
-                        <div class="container-fluid">
- 
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="text-uppercase text-center mb-4" style="color: #406882;">Segmentação de clientes (Machine Learning)</h2>
-          
-
-                                    <!-- Descrição -->
-                                    <p class="lead text-center mb-4" style="color: #444;">
-                                        Este projeto foi desenvolvido como parte de um case prático técnico durante um processo seletivo. O objetivo foi analisar e comparar o desempenho de vendas de lojas físicas de uma marca fictícia de café e identificar oportunidades estratégicas de negócio. Utilizamos Power BI para construção visual e documentação técnica no GitHub.
-                                    </p>
-                                    <!-- Divider -->
-                                    <div class="divider-custom mb-4 text-center">
-                                      <div class="divider-custom-line"></div>
-                                      <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                      <div class="divider-custom-line"></div>
-                                    </div>
-
-                          
-                                    <!-- Power BI Embed -->
-                                    <div class="mb-5">
-                                      <iframe
-                                        src="https://nbviewer.org/github/paatyiaczinski/portfolio-dados/blob/main/customer-segmentation-ml/src/02-report.ipynb" 
-                                        width="100%"
-                                        height="650"
-                                        frameborder="0"
-                                        allowFullScreen="true"
-                                        style="border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.1);"
-                                      ></iframe>
-                                    </div>
-                          
-                                    <!-- Descrição -->
-                                    <p class="lead text-center mb-4" style="color: #444;">
-                                        Para mais detalhes e informações acesse a documentação técnica no GitHub.
-                                    </p>
-                          
-                                    <!-- Links úteis como lista -->
-                                    <div class="d-flex justify-content-between flex-wrap align-items-start px-4 mt-4">
-                
-                                        <!-- Lista de links -->
-                                        <ul class="list-unstyled" style="font-size: 1.1rem;">
-                                          <li class="mb-2">
-                                            📄 <a href="https://github.com/paatyiaczinski/portfolio-dados/blob/main/customer-segmentation-ml/README.md" target="_blank" style="color: #406882; text-decoration: underline;">README</a>
-                                          </li>
-                                          <li class="mb-2">
-                                            🧮 <a href="https://github.com/paatyiaczinski/portfolio-dados/blob/main/customer-segmentation-ml/src/01-exploration.ipynb" target="_blank" style="color: #406882; text-decoration: underline;">Fórmulas DAX</a>
-                                          </li>
-                                          <li class="mb-2">
-                                            📊 <a href="https://github.com/paatyiaczinski/portfolio-dados/blob/main/customer-segmentation-ml/src/02-report.ipynb" target="_blank" style="color: #406882; text-decoration: underline;">Technical Analysis</a>
-                                          </li>
-                                          <li class="mb-2">
-                                            💡 <a href="https://github.com/paatyiaczinski/portfolio-dados/blob/main/customer-segmentation-ml/src/02-report.ipynb" target="_blank" style="color: #406882; text-decoration: underline;">Insights</a>
-                                          </li>
-                                        </ul>
-                                      
-                                        <!-- Botão Fechar -->
-                                        <div class="align-self-end ms-auto">
-                                            <button class="btn btn-primary" data-bs-dismiss="modal">
-                                              <i class="fas fa-times fa-fw"></i> Fechar
-                                            </button>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Ferramentas Documentação -->
+                    <div class="col-md-6">
+                      <h5 class="text-uppercase mb-2"> 🛠️ Ferramentas Utilizadas</h5>
+                      <ul>                        
+                        <li> <strong>Python </strong> - (Pandas, Matplotlib, Seaborn, Scikit-learn) – Análise, modelagem e gráficos</li>
+                        <li> <strong>Jupyter Notebook</strong> – Desenvolvimento iterativo e organização do relatório final  .</li>
+                        <li> <strong>Power BI</strong> – Modelagem de dados, fórmulas DAX e visualizações interativas.</li>
+                        <li> <strong>GitHub Projects</strong> - Planejamento, rastreamento e documentação em tempo real  </li>
+                      </ul>
                     </div>
+                  </div>
+      
+                  <!-- Links Documentação -->
+                  <div class="text-start px-4 mt-4">
+                    <h5 class="text-uppercase mb-3">Documentação completa</h5>
+                    <ul class="list-unstyled" style="font-size: 1.05rem;">
+                      <li class="mb-2">
+                        📄 <a href="https://github.com/paatyiaczinski/portfolio-dados/blob/main/customer-segmentation-ml/README.pt.md" target="_blank" style="color: #406882; text-decoration: underline;">README</a>
+                      </li>
+                      <li class="mb-2">
+                        🧮 <a href="https://github.com/paatyiaczinski/portfolio-dados/blob/main/customer-segmentation-ml/src/01-exploration.ipynb" target="_blank" style="color: #406882; text-decoration: underline;">Código </a>
+                      </li>
+                      <li class="mb-2">
+                        📊 <a href="https://github.com/paatyiaczinski/portfolio-dados/blob/main/customer-segmentation-ml/docs/technical-analysis.pt.md" target="_blank" style="color: #406882; text-decoration: underline;">Análise Técnica </a>
+                      </li>
+                      <li class="mb-2">
+                        💡 <a href="https://github.com/paatyiaczinski/portfolio-dados/blob/main/customer-segmentation-ml/docs/insights.pt.md" target="_blank" style="color: #406882; text-decoration: underline;">Insights </a>
+                      </li>
+                    </ul>
+                  </div>
+      
+      
+                  <!-- Painel Projeto -->  
+                  <div class="px-4 mt-4">
+                    <ul class="nav nav-tabs justify-content-center border-0" id="docTabs-modal2" role="tablist" style="gap: 1rem;">
+                      <li class="nav-item flex-fill text-center" role="presentation">
+                        <button class="nav-link active py-3 fw-bold fs-5 rounded-top" 
+                                id="dashboard-tab-modal2" 
+                                data-bs-toggle="tab" 
+                                data-bs-target="#dashboard-modal2" 
+                                type="button" 
+                                role="tab" 
+                                aria-controls="dashboard-modal2" 
+                                aria-selected="true"
+                                style="width: 100%; background-color: #eaeaf4;">
+                                📊 Dashboard Power BI
+                        </button>
+                      </li>
+                      <li class="nav-item flex-fill text-center" role="presentation">
+                        <button class="nav-link py-3 fw-bold fs-5 rounded-top" 
+                                id="relatorio-tab-modal2" 
+                                data-bs-toggle="tab" 
+                                data-bs-target="#relatorio-modal2" 
+                                type="button" 
+                                role="tab" 
+                                aria-controls="relatorio-modal2" 
+                                aria-selected="false"
+                                style="width: 100%; background-color: #eaeaf4;">
+                              📝 Sumário Executivo
+                        </button>
+                      </li>
+                    </ul>
+                  
+                    <div class="tab-content p-4 border border-top-0 rounded-bottom" id="docTabContent-modal2" style="background-color: #f9f9f9; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
+                  
+                      <!-- Aba 1: Dashboard -->
+                      <div class="tab-pane fade show active" id="dashboard-modal2" role="tabpanel" aria-labelledby="dashboard-tab-modal2">
+                        <img class="img-fluid rounded mb-4" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGVkaWFndnFnMzN5MXY5MWU3NmptZWp0d21tdmtzYWJnd3U5OHg2dyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/VbnUQpnihPSIgIXuZv/giphy.gif" alt="Work in progress..." width="300" />
+                       <!--
+                        <iframe 
+                          src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGVkaWFndnFnMzN5MXY5MWU3NmptZWp0d21tdmtzYWJnd3U5OHg2dyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/VbnUQpnihPSIgIXuZv/giphy.gif" 
+                          width="100%" 
+                          height="650" 
+                          frameborder="0" 
+                          style="border: none; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.1);">
+                        </iframe>            
+                         <p class="text-center mt-3">
+                          🔗 <a href="https://app.powerbi.com/view?r=eyJrIjoiZWMyYWZjMTgtY2I3NS00YTNiLWIyYzAtZTQyNGZkNDQxYzBjIiwidCI6IjkwNzZiMjlhLWNmZGMtNGMyNC1iNjJmLTBiMTBiOWViMDhmYiIsImMiOjl9" 
+                          target="_blank" 
+                          style="color: #406882; font-weight: 500; text-decoration: underline;">
+                            Em processo de construção
+                          </a>  -->
+                        </p>
+                      </div>
+                  
+                      <!-- Aba 2: Relatório Executivo -->
+                      <div class="tab-pane fade" id="relatorio-modal2" role="tabpanel" aria-labelledby="relatorio-tab-modal2">
+                        <iframe 
+                          src="https://nbviewer.org/github/paatyiaczinski/portifolio-dados/blob/main/customer-segmentation-ml/src/03-report.pt.ipynb" 
+                          width="100%" 
+                          height="650" 
+                          frameborder="0" 
+                          style="border: none; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.1);">
+                        </iframe>
+                        <p class="text-center mt-3">
+                          🔗 <a href="https://nbviewer.org/github/paatyiaczinski/portifolio-dados/blob/main/customer-segmentation-ml/src/03-report.pt.ipynb" 
+                          target="_blank" 
+                          style="color: #406882; font-weight: 500; text-decoration: underline;">
+                            Acessar diretamente no GitHub
+                          </a>
+                        </p>
+                      </div>
+                  
+                    </div>
+                  </div>
+                      <!-- Botão Fechar -->
+                  <div class="d-flex justify-content-end mt-4 px-4">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">
+                       <i class="fas fa-times fa-fw"></i> Fechar
+                    </button>
+                  </div>     
+                 </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
         <!-- Portfolio Modal 3-->
         <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
           <div class="modal-dialog modal-xl">
